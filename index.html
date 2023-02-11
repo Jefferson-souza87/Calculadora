@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Jefferson Souza</h1>
+    </div>
+
+    <div class="container">
+        <h2>Calculadora</h2>
+        <p id="containerP"></p>
+        <div class="teclado">
+            <table class="botao">
+                <tr>
+                    <td><button class="botao-tecla" onclick="clean('')">C</button></td>
+                    <td><button class="botao-tecla" onclick="back('')"><</button></td>
+                    <td><button class="botao-tecla" onclick="insert('/')">/</button></td>
+                    <td><button class="botao-tecla" onclick="insert('*')">X</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao-tecla" onclick="insert('7')">7</button></td>
+                    <td><button class="botao-tecla" onclick="insert('8')">8</button></td>
+                    <td><button class="botao-tecla" onclick="insert('9')">9</button></td>
+                    <td><button class="botao-tecla" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao-tecla" onclick="insert('4')">4</button></td>
+                    <td><button class="botao-tecla" onclick="insert('5')">5</button></td>
+                    <td><button class="botao-tecla" onclick="insert('6')">6</button></td>
+                    <td><button class="botao-tecla" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao-tecla" onclick="insert('1')">1</button></td>
+                    <td><button class="botao-tecla" onclick="insert('2')">2</button></td>
+                    <td><button class="botao-tecla" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button style="height: 86px;"class="botao-tecla" onclick="calcular()">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button style="width: 86px;" class="botao-tecla" onclick="insert('0')">0</button ></td>
+                    <td><button class="botao-tecla" onclick="insert('.')">.</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function insert(num)
+        {
+            var numero = document.getElementById('containerP').innerHTML;
+            document.getElementById('containerP').innerHTML = numero + num;
+        }
+        function clean()
+        {
+           document.getElementById('containerP').innerHTML =""; 
+        }
+        function back()
+        {
+            var containerP = document.getElementById('containerP').innerHTML;
+            document.getElementById('containerP').innerHTML = containerP.substring(0, containerP.length -1);
+        }
+
+        function calcular()
+        {
+            var containerP = document.getElementById('containerP').innerHTML;
+            if(containerP)
+            {
+                document.getElementById('containerP').innerHTML = eval(containerP);
+            }
+            else
+            {
+                document.getElementById('containerP').innerHTML = ""
+            }
+        }
+    </script>
+</body>
+</html>

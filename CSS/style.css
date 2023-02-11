@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-image: linear-gradient(45deg, black, red);
+    background-repeat: no-repeat;
+    height: 100vh;   
+    font-family: sans-serif;
+}
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    letter-spacing: 5px;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    background: rgba(22, 20, 20, 0.808);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 1px 1px 10px rgb(104, 101, 101);
+}
+.container h2{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+#containerP{
+    background: white;
+    border-radius: 8px;
+    text-align: right;
+    color: black;
+    text-transform: uppercase;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.botao {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botao-tecla{
+    background: black;
+    color: white;
+    font-size: 22px;
+    margin: 2px;
+    padding: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.botao-tecla:hover{
+    background: #333232;
+    box-shadow: 1px 1px 5px red;
+}
